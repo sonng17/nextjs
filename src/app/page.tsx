@@ -17,6 +17,10 @@ export default function Home() {
       revalidateOnReconnect: false,
     }
   );
+
+  if (!data) {
+    return <div>loading...</div>;
+  }
   return (
     <div>
       <div>Home</div>
@@ -38,7 +42,7 @@ export default function Home() {
           </Link>
         </li>
       </ul>
-      <AppTable />
+      <AppTable blogs={data} />
     </div>
   );
 }
