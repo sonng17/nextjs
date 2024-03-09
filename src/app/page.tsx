@@ -1,10 +1,12 @@
-"use client";
 import Link from "next/link";
 import x from "@/styles/app.module.css";
 import y from "@/styles/hoidanit.module.css";
-import AppTable from "@/components/app.table";
-import { useEffect } from "react";
-import useSWR from "swr";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "HomePage",
+  description: "Description...",
+};
 
 export default function Home() {
   return (
